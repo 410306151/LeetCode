@@ -13,13 +13,12 @@ struct ListNode {
     struct ListNode *next;
 };
 
-
 bool hasCycle(struct ListNode *head){
 	struct ListNode *head1, *head2;
-	if(head == NULL || head->next == NULL || head->next->next == NULL){
+	if(head == NULL || head->next == NULL){
 		return false;
 	}
-	for(head1 = head->next, head2 = head->next->next; head2->next != NULL && head2->next->next != NULL; head1 = head1->next, head2 = head2->next->next){
+	for(head1 = head->next, head2 = head->next->next; head2 != NULL && head2->next != NULL; head1 = head1->next, head2 = head2->next->next){
 		if(head1 == head2){
 			return true;
 		}
