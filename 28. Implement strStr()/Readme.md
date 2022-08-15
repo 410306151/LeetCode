@@ -1,6 +1,6 @@
 28. Implement strStr()  
 
-解題邏輯:
+解題邏輯:  
 A.暴力解  
 用一個迴圈跑 haystack 的每個字母，遇到 needle 的第一個字母後，進入第二個迴圈開始比對 haystack 跟 needle 每個字母是否相同。  
   
